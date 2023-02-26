@@ -1,0 +1,141 @@
+
+ListMessenger Pro Upgrade
+Version:	2.2.3
+Website:	https://listmessenger.com
+================================================================================
+
+SHORT VERSION OF INSTRUCTIONS:
+
+1)	Always backup your ListMessenger 2.x database before upgrading.
+
+2)	Make sure you've logged out of ListMessenger and have closed your
+	web-browser (to make sure session data is clean upon upgrading).
+
+3)	Rename your old ListMessenger 2.x application directory to
+	"listmessenger_backup" or something to that effect:
+	Example: http://www.yourdomain.com/listmessenger_backup
+
+4)	Upload the ListMessenger 2.2.3 application directory to your webserver
+	using the same directory name as you had with ListMessenger 2.x.
+	Example: http://www.yourdomain.com/listmessenger
+
+5)	Copy the ListMessenger 2.x "config.inc.php" from the
+	"listmessenger_backup/includes" directory to the new 2.2.3 "includes"
+	directory or just edit the new config.inc.php file with the same vales.
+
+6)	Open your browser and head directly to ListMessenger's index.php page;
+	the database changes will be automatically applied and you should receive
+	a message that says: "Congratulations, you have successfully upgraded
+	to ListMessenger 2.2.3."
+
+	This could take a few seconds as indexes are being added, please be patient.
+
+FINALLY)
+	If you had previously uploaded public/images or public/files you will
+	need to copy them to the new public/images and public/files folders.
+
+	After you have verified everything is working, you can delete the old
+	"listmessenger_backups" folder that exists as it's no longer needed.
+	Please only do this once you have verified everything is working and files
+	have been copied successfully.
+
+================================================================================
+
+LONGER VERSION OF INSTRUCTIONS:
+
+STEP 1)
+	Although there is very little work involved in upgrading from ListMessenger
+	2.x to 2.2.3, I always require that you have a valid backup of your
+	ListMessenger database.
+
+	If you do continue without a valid backup and something goes wrong, we may
+	not be able to help you restore your existing installation. Make a backup.
+
+	You can create a backup of your existing installation by using PHPMyAdmin
+	or any other database management tool's Export feature.	
+
+STEP 2)
+	Please make sure that you have logged out of your existing ListMessenger
+	installation, and that you have closed your web-browser. Doing this
+	ensures that you have clean session data when you log into ListMessenger
+	for your next visit.
+
+STEP 3)
+	Now that you have backed up your existing installation's database:
+
+	Login via FTP to your webserver and rename your current listmessenger
+	program directory to "listmessenger_backup" or something to that effect.
+
+	In doing this, if something goes wrong, it will be very simple for you to
+	revert back to the original version while seeking assistance on the forum.
+
+	Example, if your current listmessenger installation is running at:
+	http://www.yourdomain.com/listmessenger
+
+	Rename the listmessenger directory to listmessenger_backup, so that
+	it exists (non-functioning of course) at:
+	http://www.yourdomain.com/listmessenger_backup
+
+STEP 4)
+	Unpack the ListMessenger Pro 2.2.3 distribution file with your favourite
+	upzip / untar program and rename the extracted directory to "listmessenger"
+	or whatever your previous installations directory was named.
+
+STEP 5)
+	Upload the entire ListMessenger directory tree (all folders and files)
+	to the same directory name as your previous ListMessenger installation
+	was under, on a web-server which meets the following requirements:
+	-> PHP 8.0
+		\_ pSpell is required for spell checking support.
+		\_ ListMessenger uses many of PHP's built in functions which cannot
+		   be disabled, such as: file_exists, fopen, fread, fwrite, ini_set
+		   ini_get, fsockopen, ob_start, session_start.
+	-> MariaDB 10.1+ or MySQL 5.5+
+
+	<NOTICE>
+	You do not need to upload the "setup.php" file or "setup" directory.
+	</NOTICE>
+
+STEP 6)
+	The folling directories, which by default reside within the ListMessenger
+	program directory need to be writable by the user that your web-server
+	and / or PHP runs as. This can generally be done through your FTP client
+	such as Filezilla, Transmit, CuteFTP, and setting the permissions to 777.
+
+	- public/files
+	- public/images
+	- private/backups
+	- private/logs
+	- private/tmp
+
+	Unix / Linux Web-Servers:
+	Please chmod the those directories to 777 using either your FTP client
+	or by command line by entering "chmod 777 directoryname".
+
+	Windows Web-Servers:
+	I believe that on most Windows servers directories are already writable
+	by the user in which your web-server runs; however, if they are not then
+	you should be able to set this information by right clicking on the
+	directories and allowing everyone to read / write data to them.
+
+STEP 7)
+	Copy the ListMessenger 2.x "config.inc.php" from the
+	"listmessenger_backup/includes" directory to the new 2.2.3 "includes"
+	directory or just edit the new config.inc.php file with the same vales.
+
+STEP 8)
+	Open your browser and head directly to ListMessenger's index.php page;
+	the database changes will be automatically applied and you should receive
+	a message that says: "Congratulations, you have successfully upgraded
+	to ListMessenger 2.2.3."
+
+	This could take a few seconds as indexes are being added, please be patient.
+
+FINALLY)
+	If you had previously uploaded public/images or public/files you will
+	need to copy them to the new public/images and public/files folders.
+
+	After you have verified everything is working, you can delete the old
+	"listmessenger_backups" folder that exists as it's no longer needed.
+	Please only do this once you have verified everything is working and files
+	have been copied successfully.

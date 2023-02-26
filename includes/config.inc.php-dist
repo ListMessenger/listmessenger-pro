@@ -1,0 +1,8 @@
+<?php
+define("DATABASE_TYPE", "mysqli");		// Options: mysql, mysqli
+define("DATABASE_HOST", "localhost");	// Enter the MySQL host server.
+define("DATABASE_NAME", "");			// Enter the database name.
+define("DATABASE_USER", "");			// Enter your database Username.
+define("DATABASE_PASS", "");			// Enter your database Password
+define("TABLES_PREFIX", "");			// (Optional) Enter a table prefix.
+define("DATABASE_PCONNECT", false);		// Options: true, false

@@ -1,0 +1,425 @@
+
+ListMessenger ChangeLog:
+================================================================================
+[f] = fixed
+[b] = bug
+[i] = information
+[s] = security
+[+] = added
+[-] = removed
+[*] = modified
+
+2.2.3 Pro (Build 20221228) -----------------------------------------------------
+[*] Compatibility with PHP 8, which resulted in significant code changes.
+[*] Upgraded CKEditor to 4.20.
+[*] Upgraded jQuery to version 3.6.3.
+[*] Upgraded jQuery UI to version 1.13.2.
+[*] Upgraded Flot jQuery plugin.
+[f] Fixed and improved the Backup & Restore tool.
+[f] Fixed the loading of the Subscriber Stats graph.
+[-] Removed the ability to import Microsoft Excel (XLS) files. Use CSV instead.
+[-] Removed the requirement to have a licence to use ListMessenger Pro.
+[i] Every PHP file in ListMessenger has been changed with this release.
+[i] ListMessenger code, while old, now follows @Symfony,-yoda_style code style.
+
+2.2.2 Pro (Build 20220612) -----------------------------------------------------
+[*] Compatibility with PHP 7 (7.4 recommended).
+[i] Compatibility with PHP 8 is in progress.
+[*] Replaced TinyMCE with CKEditor 4.19.
+[+] Added Responsive File Manager for CKEditor 4.
+[*] Updated ADOdb to version v5.21.
+[*] Updated jQuery to version 3.4.1.
+[*] Various minor bug fixes and improvements to resurrect ListMessenger.
+
+2.2.1 Pro ----------------------------------------------------------------------
+[+] ListMessenger now requires PHP 5.1.6 or higher.
+[+] ListMessenger setup now handles initial config.inc.php creation.
+[+] Subscriber import now adheres to ListMessenger Blacklist addresses.
+[+] Added "Message Line Ending" option to E-Mail Configuration.
+[+] Added "E-Mail Address Format" option to E-Mail Configuration.
+[+] Templates now show up on confirmation page during message composition
+[+] Added pagination to the public archive.php to break up long pages.
+[*] Upgraded TinyMCE to version 3.3.9.3.
+    \_ [*] Upgraded SpellChecker plugin to version 2.0.4.
+    \_ [*] Upgraded MCImageManager plugin to version 3.1.1.4.
+[*] Upgraded InnovaStudio to version 3.6.0.
+[*] Upgraded ADOdb to version 5.11.
+[*] Upgraded PHPMailer to version 5.1.
+[*] Upgraded jQuery to version 1.4.4.
+[*] Upgraded jQuery UI to version 1.8.9.
+[*] Upgraded Flot jQuery plugin.
+[*] Tabs throughout ListMessenger now use jQuery UI tabs.
+[*] Improvements to the LM_Mailer class and use of PHPMailer class.
+[f] Fixed the broken German language file thanks to Jörg.
+[f] Fixed issues with linking to images in public/files folder.
+[f] Fixed issue with InnovaStudio to not producing HTML output.
+[f] Fixed [unsubscribeurl] variable output when sending messages.
+[f] Messages sent to private groups were exposed if group was deleted.
+[f] Fixed problem on Windows server with autocompleter not working.
+[f] Fixed problem with updating custom field data that could be empty.
+[f] Fixed multi-byte character issues with end-user tools.
+[f] Fixed multi-byte characters in autocompleter.
+[f] HTML e-mail messages are now wrapped to prevent broken HTML.
+[f] SMTP Authentication is not attempted if it's disabled.
+[f] TinyMCE now correctly enters the path to images and files folders.
+[f] IE8 now downloads exported files correctly as CSV files vs. Zip.
+[f] Fixed the install and update SQL to use ENGINE vs. TYPE=MyISAM.
+[-] Removed Google Gears support as it's no longer being developed.
+
+2.2.0 Pro (Build 20081207) -----------------------------------------------------
+[*] Upgraded TinyMCE to version 3.2.1.1.
+    \_ [*] Upgraded MCImageManager plugin to version 3.1.0.5.
+[+] Option to run TinyMCE is basic / advanced mode (with no CSS vs. CSS).
+[+] Option to use mail() in basic / advanced mode (sets 5th parameter).
+[*] Replaced TabPane library with the jQuery UI Tabs interface.
+
+2.2.0 Pro (Build 20081122) -----------------------------------------------------
+[+] Added option to enable/disable the group_id in the unsubscribe link.
+[+] Added Forward To Friend support and introduced [forwardurl] variable.
+[+] Added ability to make private groups that users cannot subscribe to.
+[+] Added basic graph for new subscribers and unsubscribe statistics.
+[+] Added examples of advanced SMTP connections in E-Mail Configuration.
+[+] Added the ability to search custom fields data for subscribers.
+[+] Added jQuery 1.2.6 javascript framework.
+[+] Added ability to resize text message textarea (compose and edit).
+[+] Added catch to catch invalid CAPTCHA codes in listmessenger.php.
+[+] Added ability to finish/correct subscribe form in listmessenger.php.
+[+] Added ListMessenger administrator password recovery process.
+[+] Added the ability to ban IP addresses from the system.
+[+] Added Google Gears support which speeds up ListMessenger interface.
+    \_ Thank-you Phil Taylor for contributing this code.
+[+] Added TinyMCE 3.2.1
+    \_ [+] Added MCImageManager 3.0.9.1 plug-in.
+    \_ [+] Added TinyMCE PHP SpellChecker 2.0.2 plugin.
+[+] Added option to not reimport subscribers who previously unsubscribed.
+[+] Added [unsubscribe] variable to e-mail variable list.
+[+] Added the ability to make the first and last name required fields.
+[+] Added multiple template support to the end-user tools.
+[+] Repurposed "Send to Subscriber" feature in the Message Centre.
+[+] Added ability to use any of the e-mail variables in admin notices.
+[+] Added ability to use RSS 0.91, 1.0, 2.0, OPML or ATOM archive feeds.
+[-] InnovaStudio 3.0 is now a separate download from listmessenger.com.
+[-] HTMLArea is now a separate download from listmessenger.com.
+[*] You can now blacklist e-mail addresses using wildcards.
+[*] Setup now checks to make sure that MySQL is installed.
+[*] ListMessenger can now run with PHP's short_tags disabled (Go PHP6).
+[*] Replaced all usage of ereg() functions (Go PHP6).
+[*] All dates in ListMessenger now use your default PHP Date Format. 
+[*] Changed tooltip libraries from DomTT to jQuery Cluetip plugin.
+[*] Replaced all help tooltips with the ListMessenger Help window.
+[*] Manage Fields shows only the required details for selected control.
+[*] Upgraded PHPMailer to 2.0.3.
+[*] Upgraded ADOdb to 4.99.
+[*] SQL_MODE is reset to nothing on every page execution.
+[*] Moved rich text editors to javascript/wysiwyg.
+[f] Fixed bug when upgrading minor versions and SQL_MODE is strict.
+[f] Fixed problem with unsubscribing when confirmation was disabled.
+[f] Fixed bug that prevented registration and updates on new server.
+[f] Fixed issue that prevented subscriber field searches within a group.
+
+2.1.0 Pro (Build P0224) --------------------------------------------- 2007-03-24
+[s] Now all subscriber data is displayed in entities when being viewed.
+[s] Optional database sessions (enable in includes/pref_ids.inc.php).
+[+] Added Captcha image support for bot prevention in end-user tools.
+[+] Added RSS Syndication support to the Message Archive (archive.php).
+[+] Added several MySQL table indexes, which greatly speeds up exports.
+[+] Added Post Subscribe Message feature to End-User Preferences.
+    \_ Thanks to Kaya Singer for the feature sponsorship.
+[+] Added Post UnSubscribe Message feature to End-User Preferences.
+[+] Add End-User Profile Update feature.
+    \_ Thanks to James Collins for the development work on this feature.
+[+] Added firstname & lastname variables to admin subscribe notices.
+[+] Added warning when char encoding changes as reminder for templates.
+[+] Added messageid variable to messages and templates.
+[+] Added profileurl variable to messages and templates.
+[+] Added Bulk Removal Tool to remove multiple subscribers at once.
+[+] Added Copy / Move subscribers feature to easily move around users.
+[+] Added SMTP Keep Alive setting to disable the keep alive state.
+[+] Added ability to remove items from Queue Manager via the interface.
+[*] Subscribers page Show Groups now shows sub-groups as well.
+[*] Manage Groups section now displays number of subscribers per group.
+[*] Updated the End-User template.html file to follow the new look!
+[*] Updated all language files with new variables (in English).
+[*] Updated all instances where mail is sent to use the LM_Mailer class.
+    \_ Thanks to James Collins for helping write this class.
+[*] ListMessenger interface is no longer a fixed width, but 80% width.
+[*] Upgraded ADOdb to version 4.94.
+[*] Upgraded InnovaStudio to version 2.9.8.
+[*] Upgraded HTMLArea to HTMLArea 3 LM-Custom Build.
+[*] Enabled FullPage plug-in in HTMLArea 3 LM-Custom Build.
+[*] Increased performance of internal page tabs.
+[*] Upgraded domTT to 0.7.3 which appears to have fixed tooltip popups.
+    \_ Thanks to kevin_klein for letting me know he too was having issues.
+[*] Changed english language files "page_confirm_title" to generic term.
+    \_ Thanks to bdeelman for letting me know this was weird.
+[*] Changed date format of changelog dates ;)
+[f] Fixed bug where help windows popped up by changing to onclick events.
+[f] Fixed restore functionality on PHP4 with large backup files.
+    \_ Thanks to Joe Miller for giving me access to his installation.
+[f] Fixed bug in Exporter which prevented custom fields from lining up.
+    \_ Thanks to Erik Geurts for finding and reporting this.
+[f] Fixed bug in Importer which prevented numeric fields from importing.
+[f] Fixed bug in confirm.php; prevented confirmation of imported users.
+[f] Fixed bug when composing or editing messages with inline forms.
+    \_ Thanks to Dave Roberts for finding this and letting me know.
+[f] Fixed valid_address regex so that it allows + in e-mail address.
+    \_ Thanks to aos101 for letting me know this wasn't considered valid.
+[f] Fixed bug in confirm.php; allowed dual-subscriptions to same group.
+    \_ Thanks to Erik Geurts for finding and reporting this.
+[f] Fixed bug in templates that didn't allow [message] to be first.
+    \_ Thanks docpeyer for finding this bug.
+[f] Fixed typo in archive.php which added a semi-colon to template.
+    \_ Thanks to aos101 for catching this as well.
+[f] Fixed typo in help.php (unfinished form tag).
+    \_ Thanks to Francois for catching this.
+[-] Removed Message Date feature, it was confusing and no longer useful.
+    \_ [date] variable will now always use the time the message was sent at.
+[-] Removed status_bar javascript, which displayed status bar messages.
+[-] Removed JSCalendar script as the Message Date feature was removed.
+
+2.0.1 Pro (Build P0212) ----------------------------------------------- 11/26/05
+[f] Fixed bug spanish.lang.php caused by corrupt Windows line breaks.
+    \_ Thanks to doink for finding and reporting this.
+[f] Added ISO-8859-1 as default charset if you're not logged in.
+    \_ Thanks Ken for letting me diagnose this on his site (PHP 4.3.10).
+
+2.0.1 Pro (Build P0211) ----------------------------------------------- 11/21/05
+[f] Fixed bug in sending progress when registered globals are disabled.
+[f] Fixed end-user bug that prevented including specified language file.
+    \_ Thanks twisterking for finding it, and Erik Geurts for the fix.
+[f] Fixed end-user bug that prevented custom field arrays from saving.
+    \_ Thanks Vera Berard for finding and letting us know about this.
+[f] Fixed PHPSniff so it no longer uses getenv() but $_SERVER.
+    \_ Thanks nr1dane for noticing getenv() doesn't work on Windows IIS.
+[f] Fixed bug in preferences if allow_fopen_url was disabled on host.
+    \_ Thanks webbuilder for finding this and providing the fix.
+[f] Fixed display message for empty search results.
+    \_ Thanks Matt H. for letting me know about this.
+[f] Fixed bug in Backup / Restore when uploading old backup file.
+[f] Fixed bug that caused Safari to unsuccessfully send messages.
+[f] Unsubscribe message is now included in the test message.
+[f] Fixed support for US .mil e-mail addresses.
+[+] Added InnovaStudio 2.9 as the default Rich Text Editor.
+[+] Added German & Spanish Language files for End-user tools.
+    \_ Thanks Wekemann Udo and Nicolas Cohen for these.
+[+] End-user tools now set cookie for language file if specified.
+[*] Admin now has ability to choose between WYSIWYG editors.
+[*] Upgraded PCLZip to 2.4.
+[*] Upgraded ADOdb to 4.66.
+[*] Upgraded PHPMailer to 1.73.
+[*] Upgraded jsCalendar to CVS version (calendar.js v1.52) for Safari.
+[*] Updated About dialog box size and added Erik Geurts' name.
+[*] Upgraded sending engine to use "insert select" (much faster).
+[*] Automatically sets focus on username field on login page.
+
+2.0.0 Pro Final (Build P0202) ----------------------------------------- 05/15/05
+[f] Modified ob_start's callback function to work-around PHP 4.2.3 bug.
+    \_ Many thanks to Benoit Poidevin who discovered the issue.
+[*] Modified the term "users" in the manage groups section.
+    \_ Many thanks to Erik Geurts for pointing this out.
+[*] Upgraded ADOdb to 4.62.
+[*] Upgraded jsCalendar to 1.0.0.
+[+] Added preference to use allow_fopen_url for opening template files.
+[+] Added preference to allow the setting of the queue timeout.
+[+] Added preference to automatically detect daylight savings time.
+[+] Added upgraded End-User Tools.
+    \_ Re-wrote every line of code in end-user tools.
+    \_ Re-wrote language file system and added e-mail messages.
+    \_ Added notifications for administrator on subscribe / unsubscribe.
+    \_ No longer requires group_ids[], can be group_ids (Flash users).
+    \_ End-User tools can now exist outside of ListMessenger directory.
+    \_ Added public_config.inc.php which houses $LM_PATH variable.
+    \_ You have the option of passing the unsubscribe file group ids.
+[f] Fixed interface bug that wouldn't allow MX checking on Darwin.
+[f] Fixed small style sheet bug in tabs.
+[f] Fixed bug in Import tools that gave error if only one field existed.
+    \_ Many thanks to Ryan and Nina for discovered the issue.
+[-] Removed FullPage plug-in from HTMLArea due to a bug in it.
+[+] Added End-User Tools page to Control Panel with a lot of info in it.
+[+] Wrote ListMessenger setup and upgrading system.
+    \_ System Requirements are all checked upon install / upgrade.
+
+1.1.0 Beta 2 0003 ----------------------------------------------------- 02/27/05
+[*] Added a check to ensure PHP 4.3.2+ before regenerating session id.
+    \_ Many thanks to gilles for discovering it didn't work for him!
+[f] Now displays errors on login page if you enter invalid credentials.
+[f] Fixed small table width problem on login page.
+[*] ListMessenger uses unique session.name now to prevent contamination.
+[*] If there's no groups when adding a new subscriber, displays notice.
+[*] Added error display to sending engine so you can view errors.
+[*] User count is preformed on_checkout() so it is immediately acurate.
+[*] Refined the sending engine even further (uses div and DOM).
+[+] Added ImageManager plug-in to HTMLArea to manage images.
+[+] Added subscriber's subscription statistics to subscriber page.
+[+] Added new Control Panel > File Management system.
+[+] Added new Control Panel > Backup and Restore system.
+[+] Added new Control Panel > E-Mail Templates for template management.
+[+] Added new Control Panel > Import & Export.
+    \_ requires PHP 4.3.0+ to use Import system.
+    \_ allows imports from Microsoft Excel and CSV from Mac & PC.
+[+] Added Timezone offset ability in Program Preferences.
+[+] Added text message spell checking to compose / edit message.
+[+] Added ability to choose an Online File to attach when composing.
+[*] Upgraded HTMLArea to 3.0 RC3 (CVS).
+[*] Upgraded ADOdb to 4.60.
+[*] Upgraded DomTT to 0.70.
+[f] Upgraded jscalendar to latest CVS version to fix Safari issue.
+[*] Added code to handle the Enter button on most fields.
+
+1.1.0 Beta 1 0008 ----------------------------------------------------- 10/21/04
+[*] Added trim() to the installer query so it won't fail for whitespace.
+    \_ Many thanks to Eric Bertrand for site access to figure this out!
+[*] Added "No Records" message to Message Centre and Queue Manager.
+[+] Added VERSION_BETA constant to display beta release information.
+[-] Removed beta information from VERSION_INFO constant.
+
+1.1.0 Beta 1 0007 ----------------------------------------------------- 10/18/04
+[*] Re-wrote almost the entire application to allow more flexibility.
+[*] Upgraded PHPMailer to PHPMailer 1.72.
+[*] Upgraded PCLZip to PCLZip 2.1.
+[*] Upgraded HTMLArea to HTMLArea 3 CVS[1.95 2004/09/17].
+[+] Added ADODB database abstraction library for database support.
+    \_ MySQL currently only supported; other databases in future.
+[+] Added DomTT JavaScript project for tooltips support (help popup).
+[+] Added jsCalendar JavaScript project for Date widget.
+[-] Removed "Tabs" DHTML.
+[+] Added "Tab Pane" for DHTML tabs.
+[*] Re-wrote sending engine for much better efficiency.
+[*] Moved Opt-In and Opt-Out message from database into language file.
+[+] Added the ability to add and send file attachments with messages.
+[+] Added the ability to add administrator defined custom fields.
+[+] Added the ability to set the character encoding type.
+[*] ListMessenger's public folder can now be seperated from program.
+[+] Added private folder to be stored outside web-root.
+[*] ListMessenger custom icon set 1.0 introduced.
+[*] ListMessenger interface re-designed and brought up to snuff.
+[*] Split the original [name] field into [firstname] and [lastname].
+[+] Added [groupname], [groupid], [userid] and [signupdate] variables.
+[*] Sending to top level group also includes all child groups.
+[+] Ability to send to multiple groups at once.
+[+] If e-mail address appears multiple times, they'll receive 1 message.
+[+] Added ability to delete multiple subscribers and messages at once.
+[+] Added ability to have "unlimited" nested groups (not just 3 levels).
+[*] Added subscribe / unsubscribe confirmaion e-mails to language files.
+
+1.0.1 ----------------------------------------------------------------- 10/27/03
+[f] Added ClearCustomHeaders() to messagesend_worker.php and fixed
+    problems with adding every users' headers to individual e-mail.
+[f] Fixed incorrect variable name in all RFC2369 compliant headers.
+[f] Added index files to public files and images directories.
+[+] Added $language["confirm"] to *.lang.php (line 108)
+[+] Added Dutch and German languages files. (thanks Erik & Michael)
+[f] Fixed non-translated text in confirm.php (thanks Erik)
+[f] Added style to errors in all public directory files.
+[*] Updated the Importer to only allow CSV imports for PHP 4.3.0+
+
+1.0.0 ----------------------------------------------------------------- 10/07/03
+[f] Save feature now works with and without EditWorks Lite enabled.
+[f] Save feature is inserting correct data (thanks Brian Hay).
+[*] Once again modified the regular expression for address validation.
+[f] Login screen height so it fits in 1024x768 window correctly.
+[*] Upgraded End-User Tools to 1.3
+    \_ [*] Fixed names with quotes in them from being slash quoted (/').
+    \_ [-] Removed ability to confirm through listmessenger.php
+[*] Upgraded PHPMailer class to 1.71.
+[-] Removed PHPSniff class as it was not really needed anymore.
+[*] Removed global $db from functions in functions.inc.php.
+[+] Added table prefix support.
+[f] Strange word wrap upon message edit fixed (thanks Marcin).
+[f] Fixed maximum e-mail size bug caused by text field (thanks Anthoni).
+[+] New browser supported: Apple's Safari 1.0+.
+[*] Modified about dialog tabs and purchased commercial licence.
+[*] Modified advanced search ability slightly.
+[+] Added the system for checking for and validating licence keys.
+[*] Rearranged Control Panel and moved all Preferences into one page.
+[+] Added the option for automatically adding unsubscribe links.
+[+] Implemented internal abuse tracking.
+[+] Added the Importing tools (from Microsoft Excel, CSV, or text).
+[*] When a user confirms an action they are presented with the action.
+[+] Added entire public directory for images (files soon).
+[+] Added public help file, unsubscribe file.
+[+] Added a public archived message system (advancements coming).
+[+] Added image upload to Rich Text Editor.
+[*] Added [unsubscribe] variable to HTML Templates with legacy support.
+[+] Added opt-in request when administrator adds the a new user.
+[+] Added user history viewer to Member List.
+[*] Added key information and website address to About Dialog box.
+
+0.9.5 ----------------------------------------------------------------- 03/09/03
+[*] About dialog box is now only viewable when logged in.
+[+] It's optional whether or not to use persistant database connections.
+[f] Fixed the htmlspecialchar'd issue when sending test messages.
+[*] Upgraded PclZip class to 1.3-Final.
+[+] Added HTMLArea Rich Text Editor for composing/editing messages.
+[*] Upgraded End-User Tools to 1.2
+    \_ [*] All End-User Script Preferences are moved into ListMessenger.
+    \_ [+] Added support for banning e-mail address or entire domains.
+    \_ [+] Detects if PHP installation can handle fopen via URL or not.
+    \_ [+] Detects if your $lm_path variable set correctly or not.
+    \_ [+] Detects if your template file exists where you say it does.
+[*] Modified the sending engine a bit and fixed an HTML issue.
+[f] Fixed an issue with Mozilla in about dialog box.
+[*] Modified backup and restore tools to reflect preferences changes.
+[+] Restore tools now check for version of file it's restoring.
+[*] Attempts to set fopen via URL now for entire program.
+[*] PHPSniff class upgraded to 2.1.2
+[f] Fixed some error messages that were incorrect.
+[+] Added ability to delete messages that are in the Queue Manager.
+[+] Added ability to sort by title in the Queue Manager.
+[+] Added ability to prune cancelled/completed queues in Queue Manager.
+[+] Able to specify if you want to use persistant database connections.
+
+0.9.4 ----------------------------------------------------------------- 01/26/03
+[+] ListMessenger is now Registered Globals Off safe!
+[*] Modified style-sheet slightly
+[f] Single + double quote slashing issue when edited message.
+[f] Properly redirects after deleting a message.
+[f] Fixed pass_by_reference issues with class.httppost.php.
+[*] Upgraded PclZip class to 1.3-RC4 (fixes pass_by_reference issue).
+[*] Upgraded PHPMailer class to 1.65.
+[*] Setup now checks to ensure PHP's Short Tags <? ?> are enabled.
+[f] Text-only e-mails wordwrap actually wraps to your preference.
+[f] Text-only e-mails now unhtmlspecialchars (& are &'s not &amp; etc).
+[f] Fixed when persons name contains single quote, group send fails bug.
+[f] Template page displays errors when/if they exist.
+[*] Backup & Restore tools now base64 encode all data for manageability.
+[+] All backups now contain what version they were backed up with.
+[*] When viewing a message text-only messages are now wrapped correctly.
+[*] Cancel/Next images are now shown in Mozilla when group sending.
+[-] gz_handler option taken out of output buffering. PHP 4.3+ does this.
+[f] E-mail addresses containing -'s are now accepted.
+[*] All addresses are validated via a single regular expression.
+[f] Invalid error image location in functions.inc.php is fixed.
+[+] ListMessenger version to preferences table.
+[*] Some other code cleaning was done, much more to do though.
+
+0.9.3 ----------------------------------------------------------------- 12/18/02
+[*] Modified style-sheet slightly
+[*] Modified how listmessenger.php does fopen so php includes work fine.
+[*] Modified the way the login works to reduce queries by 2 :)
+[+] Added password confirmation to install and to preferences.
+[+] Added some more security measures.
+[-] Removed unused download.php file. Why it was there, who knows ;)
+[+] Added todo.txt file in docs directory.
+
+0.9.2 ----------------------------------------------------------------- 12/16/02
+[+] Too many changes and fixes to actually list.
+[+] Added the end user support and forms to add to your website.
+[*] Some large visual changes in menus and interface
+[+] Added Backup & Restore utilities.
+[+] Added E-Mail Templates
+[+] Added nifty About Dialog Box if you click on version number at top.
+[+] Added support for SMTP and SendMail through "E-Mail Settings".
+[+] Added Queue Manager and Message Center.
+[-] Removed Message Archive (sent messages are now in Queue Manager)
+[*] Modified the preferences section and how it works.
+[+] Added url support for https://
+[b] Internet Explorer does not do a good job under SSL. Craps out a lot.
+[+] Setup now checks for register_globals being on.
+[+] Setup checks for > PHP 4.1.0 (as this was a lot of peoples problems)
+[*] PHPMailer class upgraded to version 1.62
+[*] PHPSniff class upgraded to 2.1.1
+[f] Changed every query to mysql_query vs mysql_db_query.
+
+0.5.0 ----------------------------------------------------------------- 06/12/02
+[+] Initial public release of ListMessenger.
