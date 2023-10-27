@@ -219,7 +219,7 @@ switch ($ACTION) {
                                     $mail->ClearAllRecipients();
                                     $mail->AddAddress($user_data['email'], $user_data['name']);
 
-                                    if ((!$mail->IsError()) && $mail->Send()) {
+                                    if ($mail->Send()) {
                                         $query = 'UPDATE `'.TABLES_PREFIX."sending` SET `sent`='1' WHERE `sending_id` = '".(int) $result['sending_id']."'";
                                         $result = $db->Execute($query);
                                         if ($result) {
